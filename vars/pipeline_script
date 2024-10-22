@@ -1,7 +1,15 @@
+@Library("Shared") _
 pipeline {
     agent any
 
     stages {
+        stage("Namaste"){
+steps{
+script{
+namaste()
+}
+}
+        }
         stage("Code") {
             steps {
                 echo "Cloning phase"
